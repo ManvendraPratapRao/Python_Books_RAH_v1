@@ -1,0 +1,158 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script, and contain the exe and
+#  other files built by PyInstaller.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.noserc
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.stats
+.coveragerc
+.hypothesis/
+.locust-history
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the env is specific to the developer
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#1173, Pipfile.lock should be part of the git repo.
+#   But sometimes users want to keep it out of the repo
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipenv, poetry.lock is generally tracked in version control
+#poetry.lock
+
+# pdm
+#   Similar to Pipenv, pdm.lock is generally tracked in version control
+#pdm.lock
+
+# PEP 582; used by e.g. github.com/frenzymadness/venva
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Project specific
+data/
+!data/**/.gitkeep
+node_modules/
+.next/
+out/
+build/
+*.log
+.DS_Store
