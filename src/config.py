@@ -13,7 +13,9 @@ class Config:
     SPARSE_MODEL = os.getenv("SPARSE_MODEL", "prithivida/Splade_PP_en_v1")
     RERANK_MODEL = os.getenv("RERANK_MODEL", "BAAI/bge-reranker-base")
     
-    QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
     QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "library_hybrid_v1")
+    
+    API_KEY = os.getenv("API_KEY", "rag_secret_123")
+    RATE_LIMIT_PER_MIN = int(os.getenv("RATE_LIMIT_PER_MIN", "60"))
 
 settings = Config()

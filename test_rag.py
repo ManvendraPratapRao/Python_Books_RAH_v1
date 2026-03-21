@@ -24,6 +24,14 @@ def test_existing_rag():
         print("❌ PyTorch is using CPU. (Ensure CUDA is correctly configured if you want GPU acceleration)")
     print("---------------------------------\n")
     
+    print("0. Initializing Observability & Tracing...")
+    try:
+        from src.monitoring.phoenix_tracer import init_phoenix
+        dashboard_url = init_phoenix()
+        print(f"✅ Phoenix Monitoring Active! Dashboard: {dashboard_url}\n")
+    except Exception as e:
+        print(f"⚠️ Tracing not started. If you want monitoring, run `pip install arize-phoenix openinference-instrumentation-llama-index`.\nError: {e}\n")
+
     print("1. Connecting to your existing Qdrant Database...")
     client = get_qdrant_client()
     
@@ -99,6 +107,17 @@ def test_existing_rag():
         print(f"\n\n❌ An error occurred during generation: {e}")
         if "more system memory" in str(e).lower() or "500" in str(e):
             print(f"\n💡 Tip: Your system ran out of RAM for the LLM. Try changing `LLM_MODEL` in your `.env` file to a smaller model.")
+            
+    # Pause the script so the user can view the Phoenix Dashboard before it closes
+    print("\n" + "="*50)
+    input("🛑 Press ENTER to close the script and shut down the Phoenix Dashboard...")
+    
+    # Cleanly shut down Phoenix to prevent Windows permission errors on exit
+    try:
+        import phoenix as px
+        px.close_app()
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     test_existing_rag()
